@@ -22,12 +22,12 @@ namespace Trestlebridge.Actions {
             Console.Write ("> ");
             int choice = Int32.Parse(Console.ReadLine ());
 
-            farm.GrazingFields[choice].AddResource(animal);
+            farm.GrazingFields[choice - 1].AddResource(animal);
 
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
-             */
+            */
             // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
