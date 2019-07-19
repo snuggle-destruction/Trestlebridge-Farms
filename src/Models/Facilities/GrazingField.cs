@@ -30,7 +30,7 @@ namespace Trestlebridge.Models.Facilities
         public void AddResource(List<IGrazing> animals)
         {
             // TODO: implement this...
-
+            Console.WriteLine("This should do something @ GrazingField AddResource");
         }
 
         public override string ToString()

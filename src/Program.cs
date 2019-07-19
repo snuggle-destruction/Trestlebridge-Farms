@@ -48,8 +48,17 @@ namespace Trestlebridge
                 }
                 else if (option == "2")
                 {
-                    DisplayBanner();
-                    PurchaseStock.CollectInput(Trestlebridge);
+                    if (Trestlebridge.GrazingFields.Count != 0)
+                    {
+                        DisplayBanner();
+                        PurchaseStock.CollectInput(Trestlebridge);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
+                        Console.WriteLine("Press enter bro");
+                        Console.ReadLine();
+                    }
                 }
                 else if (option == "4")
                 {
