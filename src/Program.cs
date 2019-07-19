@@ -7,7 +7,7 @@ namespace Trestlebridge
 {
     class Program
     {
-        static void DisplayBanner ()
+        static void DisplayBanner()
         {
             Console.Clear();
             Console.WriteLine();
@@ -23,7 +23,7 @@ namespace Trestlebridge
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.White;
-			Console.BackgroundColor = ConsoleColor.DarkMagenta;
+            Console.BackgroundColor = ConsoleColor.DarkCyan;
 
             Farm Trestlebridge = new Farm();
 
@@ -48,8 +48,31 @@ namespace Trestlebridge
                 }
                 else if (option == "2")
                 {
-                    DisplayBanner();
-                    PurchaseStock.CollectInput(Trestlebridge);
+                    if (Trestlebridge.GrazingFields.Count != 0)
+                    {
+                        DisplayBanner();
+                        PurchaseStock.CollectInput(Trestlebridge);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
+                        Console.WriteLine("Press enter bro");
+                        Console.ReadLine();
+                    }
+                }
+                else if (option == "3")
+                {
+                    if (Trestlebridge.PlowedFields.Count != 0)
+                    {
+                        DisplayBanner();
+                        PurchaseSeed.CollectInput(Trestlebridge);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
+                        Console.WriteLine("Press enter bro");
+                        Console.ReadLine();
+                    }
                 }
                 else if (option == "4")
                 {
