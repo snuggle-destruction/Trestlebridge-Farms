@@ -74,21 +74,7 @@ namespace Trestlebridge
                         Console.ReadLine();
                     }
                 }
-                // else if (option == "4")
-                // {
-                //     if (Trestlebridge.NaturalFields.Count != 0)
-                //     {
-                //         DisplayBanner();
-                //         PurchaseSeed.CollectInput(Trestlebridge);
-                //     }
-                //     else
-                //     {
-                //         Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
-                //         Console.WriteLine("Press enter bro");
-                //         Console.ReadLine();
-                //     }
-                // }
-                else if (option == "5")
+                else if (option == "4")
                 {
                     DisplayBanner();
                     Console.WriteLine(Trestlebridge);
@@ -96,9 +82,9 @@ namespace Trestlebridge
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                 }
-                else if (option == "6")
+                else if (option == "5")
                 {
-                    Console.WriteLine("Today is a great day for farming");
+                    Console.WriteLine("Today is a great day for farming. May the good Kracken save you.");
                     break;
                 }
                 else
