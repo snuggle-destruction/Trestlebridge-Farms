@@ -84,7 +84,7 @@ namespace Trestlebridge
                 }
                 else if (option == "5")
                 {
-                    Console.WriteLine("Today is a great day for farming. May the good Kracken save you.");
+                    Console.WriteLine("Today is a great day for farming. May the good Kraken save you.");
                     break;
                 }
                 else
