@@ -44,6 +44,7 @@ namespace Trestlebridge.Actions
                 //     ChooseGrazingField.CollectInput(farm, new Dragon());
                 //     break;
                 case 7:
+
                     //! This logic only allow purchase of a duck if Duck House exists, and otherwise returns them to the main menu.
                     if (farm.DuckHouses.Count != 0)
                     {
