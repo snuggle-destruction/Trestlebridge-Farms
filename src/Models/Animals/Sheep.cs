@@ -13,7 +13,6 @@ namespace Trestlebridge.Models.Animals {
                 return this._id.ToString().Substring(this._id.ToString().Length - 6);
             }
         }
-
         public double GrassPerDay { get; set; } = 4;
         public string Type { get; } = "Sheep";
 
