@@ -74,7 +74,7 @@ namespace Trestlebridge
                         Console.ReadLine();
                     }
                 }
-                // else if (option == "4")
+                // else if (option == "6")
                 // {
                 //     if (Trestlebridge.NaturalFields.Count != 0)
                 //     {
@@ -88,7 +88,7 @@ namespace Trestlebridge
                 //         Console.ReadLine();
                 //     }
                 // }
-                else if (option == "5")
+                else if (option == "4")
                 {
                     DisplayBanner();
                     Console.WriteLine(Trestlebridge);
@@ -96,7 +96,7 @@ namespace Trestlebridge
                     Console.WriteLine("Press return key to go back to main menu.");
                     Console.ReadLine();
                 }
-                else if (option == "6")
+                else if (option == "5")
                 {
                     Console.WriteLine("Today is a great day for farming");
                     break;
