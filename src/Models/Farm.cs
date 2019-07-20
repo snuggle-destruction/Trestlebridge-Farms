@@ -50,7 +50,7 @@ namespace Trestlebridge.Models
 
             GrazingFields.ForEach(gf => report.Append(gf));
             PlowedFields.ForEach(gf => report.Append(gf));
-            NaturalFields.ForEach(nf => report.Append(nf));
+            NaturalFields.ForEach(gf => report.Append(gf));
             return report.ToString();
         }
     }

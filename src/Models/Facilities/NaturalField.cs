@@ -33,6 +33,11 @@ namespace Trestlebridge.Models.Facilities
             Console.WriteLine("This should do something @ Natural field");
         }
 
+        public double GatherCompost()
+        {
+            throw new NotImplementedException();
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

@@ -62,7 +62,7 @@ namespace Trestlebridge
                 }
                 else if (option == "3")
                 {
-                    if (Trestlebridge.PlowedFields.Count != 0)
+                    if (Trestlebridge.PlowedFields.Count != 0 || Trestlebridge.NaturalFields.Capacity != 0)
                     {
                         DisplayBanner();
                         PurchaseSeed.CollectInput(Trestlebridge);
