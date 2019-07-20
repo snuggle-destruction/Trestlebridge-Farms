@@ -74,7 +74,7 @@ namespace Trestlebridge
                         Console.ReadLine();
                     }
                 }
-                // else if (option == "6")
+                //  else if (option == "6")
                 // {
                 //     if (Trestlebridge.NaturalFields.Count != 0)
                 //     {
