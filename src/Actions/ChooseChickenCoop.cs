@@ -12,7 +12,7 @@ namespace Trestlebridge.Actions
         {
             Console.Clear();
 
-            for (int i = 0; i < farm.GrazingFields.Count; i++)
+            for (int i = 0; i < farm.ChickenCoops.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. Chicken Coop");
             }
