@@ -73,7 +73,13 @@ namespace Trestlebridge
                 }
                 else
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("Welcome to timeout.");
+                    Console.WriteLine("Your mom and I are very disappointed.");
+                    Console.WriteLine();
                     Console.WriteLine($"Invalid option: {option}");
+                    Console.ReadLine();
                 }
             }
         }

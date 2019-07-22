@@ -8,7 +8,7 @@ namespace Trestlebridge.Models.Facilities
 {
     public class GrazingField : IFacility<IGrazing>
     {
-        private int _capacity = 50;
+        private int _capacity = 3;
         private Guid _id = Guid.NewGuid();
 
         private List<IGrazing> _animals = new List<IGrazing>();
@@ -33,6 +33,12 @@ namespace Trestlebridge.Models.Facilities
             Console.WriteLine("This should do something @ GrazingField AddResource");
         }
 
+        public string shortId()
+        {
+            string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
+            return shortId;
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
@@ -42,6 +48,10 @@ namespace Trestlebridge.Models.Facilities
             this._animals.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
+        }
+        public int animalCount()
+        {
+            return _animals.Count;
         }
     }
 }
