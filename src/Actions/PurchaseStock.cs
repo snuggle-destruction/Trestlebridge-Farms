@@ -28,21 +28,18 @@ namespace Trestlebridge.Actions
                 case 1:
                     ChooseGrazingField.CollectInput(farm, new Cow());
                     break;
-<<<<<<< HEAD
                 // case 2:
                 //     ChooseGrazingField.CollectInput(farm, new Ostrich());
                 //     break;
                 case 3:
                     ChooseGrazingField.CollectInput(farm, new Goat());
                     break;
-=======
                 case 2:
                     ChooseGrazingField.CollectInput(farm, new Ostrich());
                     break;
                 // case 3:
                 //     ChooseGrazingField.CollectInput(farm, new Goat());
                 //     break;
->>>>>>> master
                 // case 4:
                 //     ChooseGrazingField.CollectInput(farm, new Sheep());
                 //     break;
