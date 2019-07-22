@@ -16,7 +16,8 @@ namespace Trestlebridge.Actions
             Console.WriteLine("4. Sheep");
             Console.WriteLine("5. Pig");
             Console.WriteLine("6. Dragon");
-            Console.WriteLine("7. Chicken");
+            Console.WriteLine("7. Duck");
+            Console.WriteLine("8. Chicken");
             Console.WriteLine();
             Console.WriteLine("What are you buying today?");
 
@@ -28,9 +29,9 @@ namespace Trestlebridge.Actions
                 case 1:
                     ChooseGrazingField.CollectInput(farm, new Cow());
                     break;
-                // case 2:
-                //     ChooseGrazingField.CollectInput(farm, new Ostrich());
-                //     break;
+                case 2:
+                    ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    break;
                 // case 3:
                 //     ChooseGrazingField.CollectInput(farm, new Goat());
                 //     break;
@@ -43,7 +44,26 @@ namespace Trestlebridge.Actions
                 case 6:
                     ChooseGrazingField.CollectInput(farm, new Dragon());
                     break;
+                // case 6:
+                //     ChooseGrazingField.CollectInput(farm, new Dragon());
+                //     break;
                 case 7:
+
+                    //! This logic only allow purchase of a duck if Duck House exists, and otherwise returns them to the main menu.
+                    if (farm.DuckHouses.Count != 0)
+                    {
+                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You ain't got no duck house!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 8:
                     ChooseChickenCoop.CollectInput(farm, new Chicken());
                     break;
                 default:
