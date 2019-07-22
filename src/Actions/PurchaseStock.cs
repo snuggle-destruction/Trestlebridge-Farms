@@ -27,23 +27,89 @@ namespace Trestlebridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChooseGrazingField.CollectInput(farm, new Cow());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Cow());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your cows!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 2:
-                    ChooseGrazingField.CollectInput(farm, new Ostrich());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Ostrich());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your ostrichesessss!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 3:
-                    ChooseGrazingField.CollectInput(farm, new Goat());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Goat());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your gorgeous goats!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 4:
-                    ChooseGrazingField.CollectInput(farm, new Sheep());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Sheep());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your Shiples!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 5:
-                    ChooseGrazingField.CollectInput(farm, new Pig());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Pig());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your Pigs!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 6:
-                    ChooseGrazingField.CollectInput(farm, new Dragon());
-                    break;
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Dragon());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your Dragons!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 7:
                     //! This logic only allow purchase of a duck if Duck House exists, and otherwise returns them to the main menu.
                     if (farm.DuckHouses.Count != 0)
@@ -60,8 +126,19 @@ namespace Trestlebridge.Actions
                         break;
                     }
                 case 8:
-                    ChooseChickenCoop.CollectInput(farm, new Chicken());
-                    break;
+                    if (farm.ChickenCoops.Count != 0)
+                    {
+                        ChooseChickenCoop.CollectInput(farm, new Chicken());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for your Chickens!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 default:
                     break;
             }

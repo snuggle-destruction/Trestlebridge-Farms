@@ -23,13 +23,79 @@ namespace Trestlebridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChoosePlowedField.CollectInput(farm, new Sesame());
-                    break;
+                    if (farm.PlowedFields.Count != 0)
+                    {
+                        ChoosePlowedField.CollectInput(farm, new Sesame());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for to plantin' your Sesames!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 2:
-                    ChoosePlowedField.CollectInput(farm, new Oat());
-                    break;
+                    if (farm.PlowedFields.Count != 0)
+                    {
+                        ChoosePlowedField.CollectInput(farm, new Oat());
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("There ain't no field for to plantin' your Oats!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 case 3:
-                    ChoosePlowedField.CollectInput(farm, new Sunflower());
+                    Console.Clear();
+                    Console.WriteLine("1. Plowed Field");
+                    Console.WriteLine("2. Natural Field");
+                    Console.WriteLine();
+                    Console.WriteLine("Where would you like to place your beautiful, beautiful Sunflowers?");
+
+
+
+                    Console.Write("> ");
+                    string choice2 = Console.ReadLine();
+
+                    switch (Int32.Parse(choice2))
+                    {
+                        case 1:
+                            if (farm.PlowedFields.Count != 0)
+                            {
+                                ChoosePlowedField.CollectInput(farm, new Sunflower());
+                                break;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("There ain't no field for to plantin' your Sunflowers!");
+                                Console.WriteLine("Press enter, idget!");
+                                Console.ReadLine();
+                                break;
+                            }
+                        case 2:
+                            if (farm.NaturalFields.Count != 0)
+                            {
+                                ChooseNaturalfield.CollectInput(farm, new Sunflower());
+                                break;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("There ain't no field for to plantin' your Sunflowers!");
+                                Console.WriteLine("Press enter, idget!");
+                                Console.ReadLine();
+                                break;
+                            }
+                        default:
+                            break;
+
+                    }
                     break;
                 case 4:
                     ChooseNaturalfield.CollectInput(farm, new Wildflower());
