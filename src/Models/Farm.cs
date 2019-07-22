@@ -10,9 +10,8 @@ namespace Trestlebridge.Models
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
-        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
-
         public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         /*
             This method must specify the correct product interface of the
             resource being purchased.
