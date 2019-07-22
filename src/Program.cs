@@ -66,6 +66,8 @@ namespace Trestlebridge
                 }
                 else if (option == "5")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
                     Console.WriteLine("Today is a great day for farming. May the good Kraken save you.");
                     break;
                 }

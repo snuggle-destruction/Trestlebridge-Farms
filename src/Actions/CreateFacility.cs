@@ -25,20 +25,38 @@ namespace Trestlebridge.Actions
             {
                 case 1:
                     farm.AddGrazingField(new GrazingField());
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("You've created a Grazing Field! Now go'on'n'git'ta'plantin'!");
+                    Console.ReadLine();
                     break;
                 case 2:
                     farm.AddPlowedField(new PlowedField());
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("You've created a Plowed Field! Now go'on'n'git'ta'plantin'!");
+                    Console.ReadLine();
                     break;
                 case 3:
                     farm.AddNaturalField(new NaturalField());
-                    Console.WriteLine("You've created a natural field! Now go'on'n'git'ta'plantin'!");
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("You've created a Natural Field! Now go'on'n'git'ta'plantin'!");
                     Console.ReadLine();
                     break;
                 case 4:
                     farm.AddChickenCoop(new ChickenCoop());
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("You've created a Chicken Coop! You can put a chicken in there!");
+                    Console.ReadLine();
                     break;
                 case 5:
                     farm.AddDuckHouse(new DuckHouse());
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("You've created a Duck House! You can put a Duck in there!");
+                    Console.ReadLine();
                     break;
                 default:
                     break;
