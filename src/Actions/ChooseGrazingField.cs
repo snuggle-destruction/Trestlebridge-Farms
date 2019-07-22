@@ -30,7 +30,7 @@ namespace Trestlebridge.Actions
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
-             */
+            */
             // farm.PurchaseResource<IGrazing>(animal, choice);
 
         }
