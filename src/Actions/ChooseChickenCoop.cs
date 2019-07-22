@@ -6,32 +6,32 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Actions
 {
-    public class ChoosePlowedField
+    public class ChooseChickenCoop
     {
-        public static void CollectInput(Farm farm, ISeedProducing seed)
+        public static void CollectInput(Farm farm, IGrazing chicken)
         {
             Console.Clear();
 
-            for (int i = 0; i < farm.PlowedFields.Count; i++)
+            for (int i = 0; i < farm.ChickenCoops.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Plowed Field");
+                Console.WriteLine($"{i + 1}. Chicken Coop");
             }
 
             Console.WriteLine();
 
-            // How can I output the type of seed chosen here?
-            Console.WriteLine($"Place the seed where?");
+            // How can I output the type of chicken chosen here?
+            Console.WriteLine($"Place the chicken where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
 
-            farm.PlowedFields[choice - 1].AddResource(seed);
+            farm.ChickenCoops[choice - 1].AddResource(chicken);
 
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
              */
-            // farm.PurchaseResource<IGrazing>(seed, choice);
+            // farm.PurchaseResource<IGrazing>(chicken, choice);
 
         }
     }
