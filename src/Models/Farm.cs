@@ -9,8 +9,9 @@ namespace Trestlebridge.Models
     public class Farm
     {
         public List<GrazingField> GrazingFields { get; } = new List<GrazingField>();
-        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<PlowedField> PlowedFields { get; } = new List<PlowedField>();
+        public List<NaturalField> NaturalFields { get; } = new List<NaturalField>();
+        public List<DuckHouse> DuckHouses { get; } = new List<DuckHouse>();
         public List<ChickenCoop> ChickenCoops { get; } = new List<ChickenCoop>();
 
         /*
@@ -40,6 +41,11 @@ namespace Trestlebridge.Models
             PlowedFields.Add(field);
         }
 
+
+        public void AddNaturalField(NaturalField field)
+        {
+            NaturalFields.Add(field);
+        }
         public void AddChickenCoop(ChickenCoop field)
         {
             ChickenCoops.Add(field);
@@ -55,6 +61,7 @@ namespace Trestlebridge.Models
 
             GrazingFields.ForEach(gf => report.Append(gf));
             PlowedFields.ForEach(gf => report.Append(gf));
+            NaturalFields.ForEach(gf => report.Append(gf));
             ChickenCoops.ForEach(gf => report.Append(gf));
             DuckHouses.ForEach(dh => report.Append(dh));
 
