@@ -29,6 +29,8 @@ namespace Trestlebridge.Actions
                     break;
                 case 3:
                     farm.AddNaturalField(new NaturalField());
+                    Console.WriteLine("You've created a natural field! Now go'on'n'git'ta'plantin'!");
+                    Console.ReadLine();
                     break;
                 default:
                     break;

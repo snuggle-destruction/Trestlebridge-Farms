@@ -45,7 +45,6 @@ namespace Trestlebridge.Models.Facilities
 
             output.Append($"Natural field {shortId} has {this._composts.Count} compost\n");
             this._composts.ForEach(a => output.Append($"   {a}\n"));
-
             return output.ToString();
         }
     }
