@@ -12,6 +12,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine("1. Grazing field");
             Console.WriteLine("2. Plowed field");
             Console.WriteLine("3. Natural field");
+            Console.WriteLine("5. Duck House");
 
             Console.WriteLine();
             Console.WriteLine("Choose what you want to create");
@@ -31,6 +32,9 @@ namespace Trestlebridge.Actions
                     farm.AddNaturalField(new NaturalField());
                     Console.WriteLine("You've created a natural field! Now go'on'n'git'ta'plantin'!");
                     Console.ReadLine();
+                    break;
+                case 5:
+                    farm.AddDuckHouse(new DuckHouse());
                     break;
                 default:
                     break;
