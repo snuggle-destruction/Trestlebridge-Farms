@@ -48,7 +48,7 @@ namespace Trestlebridge
                 }
                 else if (option == "2")
                 {
-                    if (Trestlebridge.GrazingFields.Count != 0)
+                    if (Trestlebridge.GrazingFields.Count != 0 || Trestlebridge.DuckHouses.Count != 0)
                     {
                         DisplayBanner();
                         PurchaseStock.CollectInput(Trestlebridge);
