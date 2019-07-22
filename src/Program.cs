@@ -48,46 +48,14 @@ namespace Trestlebridge
                 }
                 else if (option == "2")
                 {
-                    if (Trestlebridge.GrazingFields.Count != 0 || Trestlebridge.ChickenCoops.Count != 0 | Trestlebridge.DuckHouses.Count != 0)
-                    {
-                        DisplayBanner();
-                        PurchaseStock.CollectInput(Trestlebridge);
-                    }
-                    else
-                    {
-                        Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
-                        Console.WriteLine("Press enter bro");
-                        Console.ReadLine();
-                    }
+                    DisplayBanner();
+                    PurchaseStock.CollectInput(Trestlebridge);
                 }
                 else if (option == "3")
                 {
-                    if (Trestlebridge.PlowedFields.Count != 0 || Trestlebridge.NaturalFields.Capacity != 0)
-                    {
-                        DisplayBanner();
-                        PurchaseSeed.CollectInput(Trestlebridge);
-                    }
-                    else
-                    {
-                        Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
-                        Console.WriteLine("Press enter bro");
-                        Console.ReadLine();
-                    }
+                    DisplayBanner();
+                    PurchaseSeed.CollectInput(Trestlebridge);
                 }
-                //  else if (option == "6")
-                // {
-                //     if (Trestlebridge.NaturalFields.Count != 0)
-                //     {
-                //         DisplayBanner();
-                //         PurchaseSeed.CollectInput(Trestlebridge);
-                //     }
-                //     else
-                //     {
-                //         Console.WriteLine("You have no place to store your resources. Buy a field. Ya idiot.");
-                //         Console.WriteLine("Press enter bro");
-                //         Console.ReadLine();
-                //     }
-                // }
                 else if (option == "4")
                 {
                     DisplayBanner();
@@ -98,12 +66,20 @@ namespace Trestlebridge
                 }
                 else if (option == "5")
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
                     Console.WriteLine("Today is a great day for farming. May the good Kraken save you.");
                     break;
                 }
                 else
                 {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine("Welcome to timeout.");
+                    Console.WriteLine("Your mom and I are very disappointed.");
+                    Console.WriteLine();
                     Console.WriteLine($"Invalid option: {option}");
+                    Console.ReadLine();
                 }
             }
         }

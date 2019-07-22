@@ -27,41 +27,157 @@ namespace Trestlebridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChooseGrazingField.CollectInput(farm, new Cow());
-                    break;
-                case 2:
-                    ChooseGrazingField.CollectInput(farm, new Ostrich());
-                    break;
-                case 3:
-                    ChooseGrazingField.CollectInput(farm, new Goat());
-                    break;
-                case 4:
-                    ChooseGrazingField.CollectInput(farm, new Sheep());
-                    break;
-                case 5:
-                    ChooseGrazingField.CollectInput(farm, new Pig());
-                    break;
-                case 6:
-                    ChooseGrazingField.CollectInput(farm, new Dragon());
-                    break;
-                case 7:
-                    //! This logic only allow purchase of a duck if Duck House exists, and otherwise returns them to the main menu.
-                    if (farm.DuckHouses.Count != 0)
+                    if (farm.GrazingFields.Count != 0)
                     {
-                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                        ChooseGrazingField.CollectInput(farm, new Cow());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                        Console.ReadLine();
                         break;
                     }
                     else
                     {
                         Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your cows!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 2:
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Ostrich());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of an Ostrich!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your ostrichesessss!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 3:
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Goat());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Goat! They're so wonderful. We're so happy for you.");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your gorgeous goats!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 4:
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Sheep());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Sheep!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your Shipes!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 5:
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Pig());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Pig!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your Pigs!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 6:
+                    if (farm.GrazingFields.Count != 0)
+                    {
+                        ChooseGrazingField.CollectInput(farm, new Dragon());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Dragon!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your Dragons!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
+                case 7:
+                    if (farm.DuckHouses.Count != 0)
+                    {
+                        ChooseDuckHouse.CollectInput(farm, new Duck());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a Duck!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
                         Console.WriteLine("You ain't got no duck house!");
                         Console.WriteLine("Press enter, idget!");
                         Console.ReadLine();
                         break;
                     }
                 case 8:
-                    ChooseChickenCoop.CollectInput(farm, new Chicken());
-                    break;
+                    if (farm.ChickenCoops.Count != 0)
+                    {
+                        ChooseChickenCoop.CollectInput(farm, new Chicken());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("Looks like you're the proud owner of a CHICKEN!!");
+                        Console.ReadLine();
+                        break;
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("There ain't no field for your Chickens!");
+                        Console.WriteLine("Press enter, idget!");
+                        Console.ReadLine();
+                        break;
+                    }
                 default:
                     break;
             }
