@@ -29,18 +29,12 @@ namespace Trestlebridge.Actions
                 case 1:
                     ChooseGrazingField.CollectInput(farm, new Cow());
                     break;
-                // case 2:
-                //     ChooseGrazingField.CollectInput(farm, new Ostrich());
-                //     break;
-                case 3:
-                    ChooseGrazingField.CollectInput(farm, new Goat());
-                    break;
                 case 2:
                     ChooseGrazingField.CollectInput(farm, new Ostrich());
                     break;
-                // case 3:
-                //     ChooseGrazingField.CollectInput(farm, new Goat());
-                //     break;
+                case 3:
+                    ChooseGrazingField.CollectInput(farm, new Goat());
+                    break;
                 // case 4:
                 //     ChooseGrazingField.CollectInput(farm, new Sheep());
                 //     break;
@@ -50,11 +44,7 @@ namespace Trestlebridge.Actions
                 case 6:
                     ChooseGrazingField.CollectInput(farm, new Dragon());
                     break;
-                // case 6:
-                //     ChooseGrazingField.CollectInput(farm, new Dragon());
-                //     break;
                 case 7:
-
                     //! This logic only allow purchase of a duck if Duck House exists, and otherwise returns them to the main menu.
                     if (farm.DuckHouses.Count != 0)
                     {
