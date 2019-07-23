@@ -57,7 +57,7 @@ namespace Trestlebridge.Actions
                     Console.WriteLine("1. Plowed Field");
                     Console.WriteLine("2. Natural Field");
                     Console.WriteLine();
-                    Console.WriteLine("Where would you like to place your beautiful, beautiful Sunflowers?");
+                    Console.WriteLine("What type of field do you want to plant your sunflowers?");
 
                     Console.Write("> ");
                     string choice2 = Console.ReadLine();
@@ -96,6 +96,7 @@ namespace Trestlebridge.Actions
                             }
                         default:
                             break;
+
                     }
                     break;
                 case 4:
