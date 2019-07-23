@@ -30,17 +30,6 @@ namespace Trestlebridge.Actions
                     if (farm.GrazingFields.Count != 0)
                     {
                         ChooseGrazingField.CollectInput(farm, new Cow());
-                        // Console.Clear();
-                        // Console.WriteLine("\n\n\n");
-                        // if(farm.GrazingFields[Int32.Parse(choice) - 1].animalCount() == farm.GrazingFields[Int32.Parse(choice) - 1].Capacity)
-                        // {
-                        //     System.Console.WriteLine("That daggum field is full, y'heer?");
-                        // }
-                        // else
-                        // {
-                        //     Console.WriteLine("Looks like you're the proud owner of a Cow!");
-                        // }
-                        // Console.ReadLine();
                         break;
                     }
                     else
@@ -132,10 +121,6 @@ namespace Trestlebridge.Actions
                     if (farm.GrazingFields.Count != 0)
                     {
                         ChooseGrazingField.CollectInput(farm, new Dragon());
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of a Dragon!");
-                        Console.ReadLine();
                         break;
                     }
                     else
@@ -170,10 +155,6 @@ namespace Trestlebridge.Actions
                     if (farm.ChickenCoops.Count != 0)
                     {
                         ChooseChickenCoop.CollectInput(farm, new Chicken());
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of a CHICKEN!!");
-                        Console.ReadLine();
                         break;
                     }
                     else
