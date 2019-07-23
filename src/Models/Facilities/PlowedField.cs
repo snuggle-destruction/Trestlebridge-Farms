@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
-
+using System.Linq;
 
 namespace Trestlebridge.Models.Facilities
 {
@@ -40,9 +40,31 @@ namespace Trestlebridge.Models.Facilities
 
             output.Append($"Plowed field {shortId} has {this._seeds.Count} seed\n");
             this._seeds.ForEach(a => output.Append($"   {a}\n"));
+            var typeList =
+                (from seed in _seeds
+                 group seed by seed.GetType().Name into seedTypeList
+                 select new
+                 {
+                     seedType = seedTypeList.Key,
+                     seedCount = seedTypeList.Count()
+                 }
+                ).ToList();
 
+            typeList.ForEach(type =>
+            {
+                if (type.seedType == "Sesame")
+                {
+                output.Append($"{type.seedType} seeds: {type.seedCount}\n");
+                }
+                else
+                {
+                output.Append($"{type.seedType}s: {type.seedCount}\n");
+                }
+            });
             return output.ToString();
         }
+
+
         public int seedCount()
         {
             return _seeds.Count;
