@@ -32,6 +32,8 @@ namespace Trestlebridge.Actions
                 Console.WriteLine("\n\n\n");
                 farm.PlowedFields[choice - 1].AddResource(seed);
                 Console.WriteLine($"Looks like you're the proud owner of a single {seed}!");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
             else
@@ -39,6 +41,8 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
                 Console.WriteLine($"Plowed Field {farm.PlowedFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
 

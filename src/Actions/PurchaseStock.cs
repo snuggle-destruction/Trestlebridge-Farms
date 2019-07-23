@@ -39,7 +39,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your cows!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -54,7 +54,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your ostrichesessss!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -69,7 +69,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your gorgeous goats!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -84,7 +84,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your Shipes!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -99,7 +99,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your Pigs!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -114,7 +114,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your Dragons!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -129,7 +129,7 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("You ain't got no duck house!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
@@ -144,12 +144,14 @@ namespace Trestlebridge.Actions
                             Console.Clear();
                             Console.WriteLine("\n\n\n");
                             Console.WriteLine("There ain't no field for your Chickens!");
-                            Console.WriteLine("Press enter, idget!");
+                            Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
                             break;
                         }
                     case 0:
                         Console.WriteLine("You know that's not an option.");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
                         Console.ReadLine();
                         break;
                     default:
@@ -161,6 +163,8 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine();
                 Console.WriteLine("You entered nothing. And that's wrong. You're bad.");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
         }

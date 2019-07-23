@@ -40,6 +40,8 @@ namespace Trestlebridge.Actions
                 Console.WriteLine("\n\n\n");
                 farm.DuckHouses[choice - 1].AddResource(animal);
                 Console.WriteLine("Looks like you're the proud owner of a Duck!");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
             else
@@ -47,6 +49,8 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
                 Console.WriteLine($"Duck House {farm.DuckHouses[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
 

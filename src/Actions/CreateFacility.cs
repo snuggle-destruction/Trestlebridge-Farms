@@ -28,6 +28,8 @@ namespace Trestlebridge.Actions
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
                     Console.WriteLine("You've created a Grazing Field! Now go'on'n'git'ta'plantin'!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     break;
                 case 2:
@@ -35,6 +37,8 @@ namespace Trestlebridge.Actions
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
                     Console.WriteLine("You've created a Plowed Field! Now go'on'n'git'ta'plantin'!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     break;
                 case 3:
@@ -42,6 +46,8 @@ namespace Trestlebridge.Actions
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
                     Console.WriteLine("You've created a Natural Field! Now go'on'n'git'ta'plantin'!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     break;
                 case 4:
@@ -49,6 +55,8 @@ namespace Trestlebridge.Actions
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
                     Console.WriteLine("You've created a Chicken Coop! You can put a chicken in there!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     break;
                 case 5:
@@ -56,6 +64,8 @@ namespace Trestlebridge.Actions
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
                     Console.WriteLine("You've created a Duck House! You can put a Duck in there!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     break;
                 default:
