@@ -75,10 +75,6 @@ namespace Trestlebridge.Actions
                     if (farm.GrazingFields.Count != 0)
                     {
                         ChooseGrazingField.CollectInput(farm, new Sheep());
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of a Sheep!");
-                        Console.ReadLine();
                         break;
                     }
                     else

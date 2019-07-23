@@ -26,7 +26,6 @@ namespace Trestlebridge.Actions
 
             Console.WriteLine();
 
-
             Console.WriteLine($"Place the seed where?");
 
             Console.Write("> ");
@@ -38,7 +37,7 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
                 farm.NaturalFields[choice - 1].AddResource(compost);
-                Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                Console.WriteLine($"Looks like you're the proud owner of a {compost}!");
                 Console.ReadLine();
             }
             else
