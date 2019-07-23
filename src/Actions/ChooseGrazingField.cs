@@ -33,7 +33,14 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
             int animalCount = farm.GrazingFields[choice - 1].animalCount();
 
-            farm.GrazingFields[choice - 1].AddResource(animal);
+            if (farm.GrazingFields[choice - 1].animalCount() != farm.GrazingFields[choice - 1].Capacity)
+            {
+                farm.GrazingFields[choice - 1].AddResource(animal);
+            }
+            else
+            {
+                Console.WriteLine($"Grazing Field {farm.GrazingFields[choice - 1].shortId()} is at capacity.");
+            }
 
             /*
                 Couldn't get this to work. Can you?

@@ -32,7 +32,14 @@ namespace Trestlebridge.Actions
                         ChooseGrazingField.CollectInput(farm, new Cow());
                         Console.Clear();
                         Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                        if(farm.GrazingFields[Int32.Parse(choice) - 1].animalCount() == farm.GrazingFields[Int32.Parse(choice) - 1].Capacity)
+                        {
+                            System.Console.WriteLine("That daggum field is full, y'heer?");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                        }
                         Console.ReadLine();
                         break;
                     }
