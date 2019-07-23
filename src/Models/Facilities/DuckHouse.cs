@@ -8,7 +8,7 @@ namespace Trestlebridge.Models.Facilities
 {
     public class DuckHouse : IFacility<IGrazing>
     {
-        private int _capacity = 50;
+        private int _capacity = 3;
         private Guid _id = Guid.NewGuid();
 
         private List<IGrazing> _ducks = new List<IGrazing>();
@@ -19,6 +19,12 @@ namespace Trestlebridge.Models.Facilities
             {
                 return _capacity;
             }
+        }
+
+        public string shortId()
+        {
+            string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
+            return shortId;
         }
 
         public void AddResource(IGrazing animal)
@@ -38,10 +44,14 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Duck House {shortId} has {this._ducks.Count} animals\n");
-            this._ducks.ForEach(a => output.Append($"   {a}\n"));
+            output.Append($"Duck House {shortId} has {this._ducks.Count} duck(s)\n");
 
             return output.ToString();
+        }
+
+        public int duckCount()
+        {
+            return _ducks.Count;
         }
     }
 }
