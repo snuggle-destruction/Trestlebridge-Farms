@@ -26,9 +26,6 @@ namespace Trestlebridge.Actions
             int choice = Int32.Parse(Console.ReadLine());
 
             farm.NaturalFields[choice - 1].AddResource(compost);
-
-
-
         }
     }
 }
