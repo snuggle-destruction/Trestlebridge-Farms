@@ -45,7 +45,7 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Grazing Field {farm.NaturalFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine($"Natural Field {farm.NaturalFields[choice - 1].shortId()} is daggum full! Y'heer??");
                 Console.ReadLine();
             }
         }
