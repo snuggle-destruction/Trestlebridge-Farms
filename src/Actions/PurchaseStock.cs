@@ -24,131 +24,146 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             string choice = Console.ReadLine();
 
-            switch (Int32.Parse(choice))
+            if (choice != "")
             {
-                case 1:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Cow());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your cows!");
-                        Console.WriteLine("Press enter, idget!");
+                switch (Int32.Parse(choice))
+                {
+                    case 1:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Cow());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your cows!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 2:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Ostrich());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your ostrichesessss!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 3:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Goat());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your gorgeous goats!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 4:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Sheep());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your Shipes!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 5:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Pig());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your Pigs!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 6:
+                        if (farm.GrazingFields.Count != 0)
+                        {
+                            ChooseGrazingField.CollectInput(farm, new Dragon());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your Dragons!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 7:
+                        if (farm.DuckHouses.Count != 0)
+                        {
+                            ChooseDuckHouse.CollectInput(farm, new Duck());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("You ain't got no duck house!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 8:
+                        if (farm.ChickenCoops.Count != 0)
+                        {
+                            ChooseChickenCoop.CollectInput(farm, new Chicken());
+                            break;
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("\n\n\n");
+                            Console.WriteLine("There ain't no field for your Chickens!");
+                            Console.WriteLine("Press enter, idget!");
+                            Console.ReadLine();
+                            break;
+                        }
+                    case 0:
+                        Console.WriteLine("You know that's not an option.");
                         Console.ReadLine();
                         break;
-                    }
-                case 2:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Ostrich());
+                    default:
                         break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your ostrichesessss!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 3:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Goat());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your gorgeous goats!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 4:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Sheep());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your Shipes!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 5:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Pig());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your Pigs!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 6:
-                    if (farm.GrazingFields.Count != 0)
-                    {
-                        ChooseGrazingField.CollectInput(farm, new Dragon());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your Dragons!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 7:
-                    if (farm.DuckHouses.Count != 0)
-                    {
-                        ChooseDuckHouse.CollectInput(farm, new Duck());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("You ain't got no duck house!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                case 8:
-                    if (farm.ChickenCoops.Count != 0)
-                    {
-                        ChooseChickenCoop.CollectInput(farm, new Chicken());
-                        break;
-                    }
-                    else
-                    {
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("There ain't no field for your Chickens!");
-                        Console.WriteLine("Press enter, idget!");
-                        Console.ReadLine();
-                        break;
-                    }
-                default:
-                    break;
+                }
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("You entered nothing. And that's wrong. You're bad.");
+                Console.ReadLine();
             }
         }
+
     }
 }
