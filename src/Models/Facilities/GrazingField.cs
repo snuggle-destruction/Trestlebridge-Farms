@@ -47,7 +47,7 @@ namespace Trestlebridge.Models.Facilities
             output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
             var typeList =
                 (from animal in _animals
-                 group animal by animal.GetType() into animalTypeList
+                 group animal by animal.GetType().Name into animalTypeList
                  select new
                  {
                      animalType = animalTypeList.Key,
@@ -57,8 +57,15 @@ namespace Trestlebridge.Models.Facilities
 
             typeList.ForEach(type =>
             {
-                string newType = type.animalType.ToString().Split(".")[3];
-                output.Append($"{newType}(s): {type.animalCount}\n");
+                // string newType = type.animalType.ToString().Split(".")[3];
+                if (type.animalType == "Ostrich")
+                {
+                    output.Append($"{type.animalType}es: {type.animalCount}\n");
+                }
+                else
+                {
+                    output.Append($"{type.animalType}s: {type.animalCount}\n");
+                }
             });
 
             return output.ToString();
