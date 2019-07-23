@@ -27,14 +27,27 @@ namespace Trestlebridge.Actions
             Console.WriteLine();
 
             // How can I output the type of animal chosen here?
-            Console.WriteLine($"Place the animal where?");
+            Console.WriteLine($"Place the {animal} where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
             int animalCount = farm.GrazingFields[choice - 1].animalCount();
 
-            farm.GrazingFields[choice - 1].AddResource(animal);
-
+            if (farm.GrazingFields[choice - 1].animalCount() != farm.GrazingFields[choice - 1].Capacity)
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                farm.GrazingFields[choice - 1].AddResource(animal);
+                Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                Console.WriteLine($"Grazing Field {farm.GrazingFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.ReadLine();
+            }
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
