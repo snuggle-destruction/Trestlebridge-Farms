@@ -56,10 +56,6 @@ namespace Trestlebridge.Actions
                     if (farm.GrazingFields.Count != 0)
                     {
                         ChooseGrazingField.CollectInput(farm, new Ostrich());
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of an Ostrich!");
-                        Console.ReadLine();
                         break;
                     }
                     else
@@ -151,10 +147,6 @@ namespace Trestlebridge.Actions
                     if (farm.DuckHouses.Count != 0)
                     {
                         ChooseDuckHouse.CollectInput(farm, new Duck());
-                        Console.Clear();
-                        Console.WriteLine("\n\n\n");
-                        Console.WriteLine("Looks like you're the proud owner of a Duck!");
-                        Console.ReadLine();
                         break;
                     }
                     else
