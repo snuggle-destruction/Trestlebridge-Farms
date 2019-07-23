@@ -19,7 +19,6 @@ namespace Trestlebridge.Actions
 
             Console.WriteLine();
 
-
             Console.WriteLine($"Place the seed where?");
 
             Console.Write("> ");
