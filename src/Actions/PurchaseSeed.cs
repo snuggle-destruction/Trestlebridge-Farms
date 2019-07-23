@@ -33,6 +33,7 @@ namespace Trestlebridge.Actions
                         Console.Clear();
                         Console.WriteLine("\n\n\n");
                         Console.WriteLine("There ain't no field for to plantin' your Sesames!");
+                        Console.WriteLine("\n\n");
                         Console.WriteLine("Press enter to continue");
                         Console.ReadLine();
                         break;
@@ -48,6 +49,7 @@ namespace Trestlebridge.Actions
                         Console.Clear();
                         Console.WriteLine("\n\n\n");
                         Console.WriteLine("There ain't no field for to plantin' your Oats!");
+                        Console.WriteLine("\n\n");
                         Console.WriteLine("Press enter to continue");
                         Console.ReadLine();
                         break;
