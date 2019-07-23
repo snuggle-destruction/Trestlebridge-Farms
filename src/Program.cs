@@ -68,7 +68,7 @@ namespace Trestlebridge
                 {
                     Console.Clear();
                     Console.WriteLine("\n\n\n");
-                    Console.WriteLine("Today is a great day for farming. May the good Kraken save you.");
+                    Console.WriteLine("Today is a great day for farming. May you drown in the great Kraken's infinite love.");
                     Console.WriteLine(@"              
                  7... 7                 
               77.......7                
