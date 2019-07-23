@@ -37,7 +37,7 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                farm.GrazingFields[choice - 1].AddResource(chicken);
+                farm.ChickenCoops[choice - 1].AddResource(chicken);
                 Console.WriteLine("Looks like you're the proud owner of a Chicken!");
                 Console.ReadLine();
             }
@@ -45,7 +45,7 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Grazing Field {farm.GrazingFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine($"Chicken Coop {farm.ChickenCoops[choice - 1].shortId()} is daggum full! Y'heer??");
                 Console.ReadLine();
             }
 
@@ -54,7 +54,6 @@ namespace Trestlebridge.Actions
                 Stretch goal. Only if the app is fully functional.
              */
             // farm.PurchaseResource<IGrazing>(chicken, choice);
-
         }
     }
 }
