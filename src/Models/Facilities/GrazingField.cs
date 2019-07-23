@@ -2,7 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
-
+using System.Linq;
 
 namespace Trestlebridge.Models.Facilities
 {
@@ -45,7 +45,21 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
             output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
-            this._animals.ForEach(a => output.Append($"   {a}\n"));
+            var typeList =
+                (from animal in _animals
+                 group animal by animal.GetType() into animalTypeList
+                 select new
+                 {
+                     animalType = animalTypeList.Key,
+                     animalCount = animalTypeList.Count()
+                 }
+                ).ToList();
+
+            typeList.ForEach(type =>
+            {
+                string newType = type.animalType.ToString().Split(".")[3];
+                output.Append($"{newType}(s): {type.animalCount}\n");
+            });
 
             return output.ToString();
         }
