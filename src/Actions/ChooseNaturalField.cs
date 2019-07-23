@@ -14,7 +14,14 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.NaturalFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Natural Field");
+                if (farm.NaturalFields[i].seedCount() != farm.NaturalFields[i].Capacity)
+                {
+                    Console.WriteLine($"{i + 1}. Natural Field");
+                }
+                else
+                {
+                    Console.WriteLine($"{i + 1}. Natural Field {farm.NaturalFields[i].shortId()} is at capacity");
+                }
             }
 
             Console.WriteLine();
@@ -23,8 +30,23 @@ namespace Trestlebridge.Actions
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
+            int seedCount = farm.NaturalFields[choice - 1].seedCount();
 
-            farm.NaturalFields[choice - 1].AddResource(compost);
+            if (farm.NaturalFields[choice - 1].seedCount() != farm.NaturalFields[choice - 1].Capacity)
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                farm.NaturalFields[choice - 1].AddResource(compost);
+                Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                Console.WriteLine($"Natural Field {farm.NaturalFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.ReadLine();
+            }
         }
     }
 }
