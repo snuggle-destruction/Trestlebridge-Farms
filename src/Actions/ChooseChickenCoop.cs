@@ -54,7 +54,6 @@ namespace Trestlebridge.Actions
                 Stretch goal. Only if the app is fully functional.
              */
             // farm.PurchaseResource<IGrazing>(chicken, choice);
-
         }
     }
 }

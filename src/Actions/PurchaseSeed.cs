@@ -96,7 +96,6 @@ namespace Trestlebridge.Actions
                             }
                         default:
                             break;
-
                     }
                     break;
                 case 4:
