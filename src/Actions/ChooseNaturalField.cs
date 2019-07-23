@@ -16,7 +16,7 @@ namespace Trestlebridge.Actions
             {
                 if (farm.NaturalFields[i].seedCount() != farm.NaturalFields[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Natural Field");
+                    Console.WriteLine($"{i + 1}. Natural Field {farm.NaturalFields[i].shortId()}");
                 }
                 else
                 {
@@ -26,7 +26,7 @@ namespace Trestlebridge.Actions
 
             Console.WriteLine();
 
-            Console.WriteLine($"Place the seed where?");
+            Console.WriteLine($"Place the seed which natural field?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
