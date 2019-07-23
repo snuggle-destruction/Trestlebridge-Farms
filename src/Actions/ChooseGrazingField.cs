@@ -38,7 +38,7 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
                 farm.GrazingFields[choice - 1].AddResource(animal);
-                Console.WriteLine("Looks like you're the proud owner of a Cow!");
+                Console.WriteLine($"Looks like you're the proud owner of a {animal}!");
                 Console.ReadLine();
             }
             else
