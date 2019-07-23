@@ -45,7 +45,6 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
             output.Append($"Chicken Coop {shortId} has {this._chickens.Count} chickens\n");
-            this._chickens.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
         }

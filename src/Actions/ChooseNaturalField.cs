@@ -38,6 +38,8 @@ namespace Trestlebridge.Actions
                 Console.WriteLine("\n\n\n");
                 farm.NaturalFields[choice - 1].AddResource(compost);
                 Console.WriteLine($"Looks like you're the proud owner of a {compost}!");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
             else
@@ -45,6 +47,8 @@ namespace Trestlebridge.Actions
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
                 Console.WriteLine($"Natural Field {farm.NaturalFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
             }
         }
