@@ -24,8 +24,23 @@ namespace Trestlebridge.Actions
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
+            int seedCount = farm.PlowedFields[choice - 1].seedCount();
 
-            farm.PlowedFields[choice - 1].AddResource(seed);
+            if (farm.PlowedFields[choice - 1].seedCount() != farm.PlowedFields[choice - 1].Capacity)
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                farm.PlowedFields[choice - 1].AddResource(seed);
+                Console.WriteLine($"Looks like you're the proud owner of a single {seed}!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                Console.WriteLine($"Plowed Field {farm.PlowedFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.ReadLine();
+            }
 
             /*
                 Couldn't get this to work. Can you?
