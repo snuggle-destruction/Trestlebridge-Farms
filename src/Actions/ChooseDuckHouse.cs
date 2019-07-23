@@ -14,7 +14,14 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.DuckHouses.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Duck House");
+                if (farm.DuckHouses[i].duckCount() != farm.DuckHouses[i].Capacity)
+                {
+                    Console.WriteLine($"{i + 1}. Duck House");
+                }
+                else
+                {
+                    Console.WriteLine($"{i + 1}. Duck House {farm.DuckHouses[i].shortId()} is at capacity.");
+                }
             }
 
             Console.WriteLine();
@@ -24,15 +31,30 @@ namespace Trestlebridge.Actions
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
+            int duckCount = farm.DuckHouses[choice - 1].duckCount();
 
-            farm.DuckHouses[choice - 1].AddResource(animal);
+
+            if (farm.DuckHouses[choice - 1].duckCount() != farm.DuckHouses[choice - 1].Capacity)
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                farm.DuckHouses[choice - 1].AddResource(animal);
+                Console.WriteLine("Looks like you're the proud owner of a Duck!");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("\n\n\n");
+                Console.WriteLine($"Duck House {farm.DuckHouses[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.ReadLine();
+            }
 
             /*
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
              */
             // farm.PurchaseResource<IGrazing>(animal, choice);
-
         }
     }
 }
