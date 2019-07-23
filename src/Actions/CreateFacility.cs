@@ -21,55 +21,67 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             string input = Console.ReadLine();
 
-            switch (Int32.Parse(input))
+            if (input != "")
             {
-                case 1:
-                    farm.AddGrazingField(new GrazingField());
-                    Console.Clear();
-                    Console.WriteLine("\n\n\n");
-                    Console.WriteLine("You've created a Grazing Field! Now go'on'n'git'ta'plantin'!");
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    break;
-                case 2:
-                    farm.AddPlowedField(new PlowedField());
-                    Console.Clear();
-                    Console.WriteLine("\n\n\n");
-                    Console.WriteLine("You've created a Plowed Field! Now go'on'n'git'ta'plantin'!");
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    break;
-                case 3:
-                    farm.AddNaturalField(new NaturalField());
-                    Console.Clear();
-                    Console.WriteLine("\n\n\n");
-                    Console.WriteLine("You've created a Natural Field! Now go'on'n'git'ta'plantin'!");
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    break;
-                case 4:
-                    farm.AddChickenCoop(new ChickenCoop());
-                    Console.Clear();
-                    Console.WriteLine("\n\n\n");
-                    Console.WriteLine("You've created a Chicken Coop! You can put a chicken in there!");
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    break;
-                case 5:
-                    farm.AddDuckHouse(new DuckHouse());
-                    Console.Clear();
-                    Console.WriteLine("\n\n\n");
-                    Console.WriteLine("You've created a Duck House! You can put a Duck in there!");
-                    Console.WriteLine("\n\n");
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
-                    break;
-                default:
-                    break;
+                switch (Int32.Parse(input))
+                {
+                    case 1:
+                        farm.AddGrazingField(new GrazingField());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("You've created a Grazing Field! Now go'on'n'git'ta'plantin'!");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        farm.AddPlowedField(new PlowedField());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("You've created a Plowed Field! Now go'on'n'git'ta'plantin'!");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        farm.AddNaturalField(new NaturalField());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("You've created a Natural Field! Now go'on'n'git'ta'plantin'!");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        break;
+                    case 4:
+                        farm.AddChickenCoop(new ChickenCoop());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("You've created a Chicken Coop! You can put a chicken in there!");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        break;
+                    case 5:
+                        farm.AddDuckHouse(new DuckHouse());
+                        Console.Clear();
+                        Console.WriteLine("\n\n\n");
+                        Console.WriteLine("You've created a Duck House! You can put a Duck in there!");
+                        Console.WriteLine("\n\n");
+                        Console.WriteLine("Press enter to continue");
+                        Console.ReadLine();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("You entered nothing. And that's wrong. You're bad.");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
             }
         }
     }
