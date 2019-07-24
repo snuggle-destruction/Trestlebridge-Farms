@@ -16,7 +16,15 @@ namespace Trestlebridge.Actions
             {
                 if (farm.GrazingFields[i].animalCount() != farm.GrazingFields[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Grazing Field");
+                    if (farm.GrazingFields[i].animalCount() > 0)
+                    {
+                        // this asks the field for it's animal list to print if it has more than 0 animals in it
+                        Console.WriteLine($"{i + 1}. Grazing Field ({farm.GrazingFields[i].AnimalList()})");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i + 1}. Grazing Field");
+                    }
                 }
                 else
                 {
