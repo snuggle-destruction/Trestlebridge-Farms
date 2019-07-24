@@ -40,6 +40,35 @@ namespace Trestlebridge.Models.Facilities
             return shortId;
         }
 
+        public string SeedList()
+        {
+            StringBuilder output = new StringBuilder();
+
+            var typeList =
+                (from compost in _composts
+                 group compost by compost.GetType().Name into compostTypeList
+                 select new
+                 {
+                     compostType = compostTypeList.Key,
+                     compostCount = compostTypeList.Count()
+                 }).ToList();
+
+            typeList.ForEach(type =>
+            {
+                if (typeList.Count > 1)
+                {
+                    output.Append($"{type.compostCount} {type.compostType} ");
+                }
+                else
+                {
+                    output.Append($"{type.compostCount} {type.compostType}");
+                }
+            });
+
+            return output.ToString();
+
+        }
+
         public double GatherCompost()
         {
             throw new NotImplementedException();
@@ -51,6 +80,7 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
             output.Append($"Natural field {shortId} has {this._composts.Count} compost\n");
+
             var typeList =
                 (from compost in _composts
                  group compost by compost.GetType().Name into compostTypeList
@@ -64,7 +94,14 @@ namespace Trestlebridge.Models.Facilities
             //start here
             typeList.ForEach(type =>
             {
-                output.Append($"{type.compostType}s: {type.compostCount}\n");
+                if (typeList.Count > 1)
+                {
+                    output.Append($"{type.compostType}s: {type.compostCount} ");
+                }
+                else
+                {
+                    output.Append($"{type.compostType}s: {type.compostCount}");
+                }
             });
 
             return output.ToString();

@@ -16,7 +16,14 @@ namespace Trestlebridge.Actions
             {
                 if (farm.DuckHouses[i].duckCount() != farm.DuckHouses[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Duck House");
+                    if (farm.DuckHouses[i].duckCount() != farm.DuckHouses[i].Capacity)
+                    {
+                        Console.WriteLine($"{i + 1}. Duck House ({farm.DuckHouses[i].duckCount()} duck(s))");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i + 1}. Duck House {farm.DuckHouses[i]}");
+                    }
                 }
                 else
                 {
@@ -34,26 +41,26 @@ namespace Trestlebridge.Actions
 
             if (choice != "" && int.TryParse(choice, out int input))
             {
-            int duckCount = farm.DuckHouses[input - 1].duckCount();
-            if (farm.DuckHouses[input - 1].duckCount() != farm.DuckHouses[input - 1].Capacity)
-            {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                farm.DuckHouses[input - 1].AddResource(animal);
-                Console.WriteLine("Looks like you're the proud owner of a Duck!");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Duck House {farm.DuckHouses[input - 1].shortId()} is daggum full! Y'heer??");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
-            }
+                int duckCount = farm.DuckHouses[input - 1].duckCount();
+                if (farm.DuckHouses[input - 1].duckCount() != farm.DuckHouses[input - 1].Capacity)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    farm.DuckHouses[input - 1].AddResource(animal);
+                    Console.WriteLine("Looks like you're the proud owner of a Duck!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine($"Duck House {farm.DuckHouses[input - 1].shortId()} is daggum full! Y'heer??");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
             }
             else
             {

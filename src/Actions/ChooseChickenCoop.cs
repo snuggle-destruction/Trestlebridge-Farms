@@ -16,11 +16,19 @@ namespace Trestlebridge.Actions
             {
                 if (farm.ChickenCoops[i].animalCount() != farm.ChickenCoops[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Chicken Coop");
+                    if (farm.ChickenCoops[i].animalCount() > 0)
+                    {
+                        Console.WriteLine($"{i + 1}. Chicken Coop ({farm.ChickenCoops[i].animalCount()} chicken(s))");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i + 1}. Chicken Coop {farm.ChickenCoops[i]}");
+                    }
+
                 }
                 else
                 {
-                    Console.WriteLine($"{i + 1}. Grazing Field {farm.ChickenCoops[i].shortId()} is at capacity.");
+                    Console.WriteLine($"{i + 1}. Chicken Coop {farm.ChickenCoops[i].shortId()} is at capacity.");
                 }
             }
 
@@ -34,7 +42,7 @@ namespace Trestlebridge.Actions
 
             if (choice != "" && int.TryParse(choice, out int input))
             {
-            int animalCount = farm.ChickenCoops[input - 1].animalCount();
+                int animalCount = farm.ChickenCoops[input - 1].animalCount();
                 if (farm.ChickenCoops[input - 1].animalCount() != farm.ChickenCoops[input - 1].Capacity)
                 {
                     Console.Clear();

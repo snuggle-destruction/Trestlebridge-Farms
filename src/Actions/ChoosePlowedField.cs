@@ -14,7 +14,23 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < farm.PlowedFields.Count; i++)
             {
-                Console.WriteLine($"{i + 1}. Plowed Field {farm.PlowedFields[i].shortId()}");
+                if (farm.PlowedFields[i].seedCount() != farm.PlowedFields[i].Capacity)
+                {
+
+
+                    if (farm.PlowedFields[i].seedCount() > 0)
+                    {
+                        Console.WriteLine($"{i + 1}. Plowed Field ({farm.PlowedFields[i].SeedList()})");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i + 1}. Plowed Field {farm.PlowedFields[i]}");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine($"{i + 1}. Plowed Field {farm.PlowedFields[i].shortId()}");
+                }
             }
 
             Console.WriteLine();

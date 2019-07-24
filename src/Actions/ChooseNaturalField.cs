@@ -16,7 +16,14 @@ namespace Trestlebridge.Actions
             {
                 if (farm.NaturalFields[i].seedCount() != farm.NaturalFields[i].Capacity)
                 {
-                    Console.WriteLine($"{i + 1}. Natural Field {farm.NaturalFields[i].shortId()}");
+                    if (farm.NaturalFields[i].seedCount() > 0)
+                    {
+                        Console.WriteLine($"{i + 1}. Natural Field ({farm.NaturalFields[i].SeedList()})");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{i + 1}. Natural Field {farm.NaturalFields[i]}");
+                    }
                 }
                 else
                 {
