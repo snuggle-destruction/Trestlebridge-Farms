@@ -99,32 +99,12 @@ namespace Trestlebridge.Actions
                                     ChoosePlowedField.CollectInput(farm, new Sunflower());
                                 }
                                 break;
-                            // else
-                            // {
-                            //     Console.Clear();
-                            //     Console.WriteLine("\n\n\n");
-                            //     Console.WriteLine("There ain't no field for to plantin' your Sunflowers!");
-                            //     Console.WriteLine("\n\n");
-                            //     Console.WriteLine("Press enter to continue");
-                            //     Console.ReadLine();
-                            //     break;
-                            // }
                             case 2:
                                 if (farm.NaturalFields.Count != 0)
                                 {
                                     ChooseNaturalfield.CollectInput(farm, new Sunflower());
                                 }
                                 break;
-                            // else
-                            // {
-                            //     Console.Clear();
-                            //     Console.WriteLine("\n\n\n");
-                            //     Console.WriteLine("There ain't no field for to plantin' your Sunflowers!");
-                            //     Console.WriteLine("\n\n");
-                            //     Console.WriteLine("Press enter to continue");
-                            //     Console.ReadLine();
-                            //     break;
-                            // }
                             default:
                                 break;
 
