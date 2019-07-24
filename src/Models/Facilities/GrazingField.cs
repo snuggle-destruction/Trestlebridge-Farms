@@ -67,7 +67,6 @@ namespace Trestlebridge.Models.Facilities
                     output.Append($"{type.animalType}s: {type.animalCount}\n");
                 }
             });
-
             return output.ToString();
         }
         public int animalCount()

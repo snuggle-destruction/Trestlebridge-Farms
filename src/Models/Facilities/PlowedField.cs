@@ -64,7 +64,6 @@ namespace Trestlebridge.Models.Facilities
             return output.ToString();
         }
 
-
         public int seedCount()
         {
             return _seeds.Count;
