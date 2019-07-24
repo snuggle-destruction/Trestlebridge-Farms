@@ -22,11 +22,11 @@ namespace Trestlebridge.Actions
             Console.WriteLine("What are you buying today?");
 
             Console.Write("> ");
-            string choice = Console.ReadLine();
+            string input = Console.ReadLine();
 
-            if (choice != "")
+            if (input != "" && int.TryParse(input, out int choice))
             {
-                switch (Int32.Parse(choice))
+                switch (choice)
                 {
                     case 1:
                         if (farm.GrazingFields.Count != 0)
@@ -170,7 +170,7 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine("You entered nothing. And that's wrong. You're bad.");
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
