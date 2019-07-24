@@ -79,7 +79,7 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Natural field {shortId} has {this._composts.Count} compost\n");
+            output.Append($"Natural field {shortId} has {this._composts.Count} compost(s)\n");
 
             var typeList =
                 (from compost in _composts
@@ -91,16 +91,18 @@ namespace Trestlebridge.Models.Facilities
                  }
                 ).ToList();
 
+
+
             //start here
             typeList.ForEach(type =>
             {
                 if (typeList.Count > 1)
                 {
-                    output.Append($"{type.compostType}s: {type.compostCount} ");
+                    output.Append($"{type.compostType}s: {type.compostCount}\n ");
                 }
                 else
                 {
-                    output.Append($"{type.compostType}s: {type.compostCount}");
+                    output.Append($"{type.compostType}s: {type.compostCount}\n");
                 }
             });
 
