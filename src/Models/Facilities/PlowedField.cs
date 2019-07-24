@@ -69,7 +69,7 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Plowed field {shortId} has {this._seeds.Count} seed\n");
+            output.Append($"Plowed field {shortId} has {this._seeds.Count} seed(s)\n");
             // this._seeds.ForEach(a => output.Append($"   {a}\n"));
             var typeList =
                 (from seed in _seeds
