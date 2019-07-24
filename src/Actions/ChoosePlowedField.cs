@@ -23,24 +23,36 @@ namespace Trestlebridge.Actions
             Console.WriteLine($"Place the seed in which plowed field?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine());
-            int seedCount = farm.PlowedFields[choice - 1].seedCount();
+            string choice = Console.ReadLine();
 
-            if (farm.PlowedFields[choice - 1].seedCount() != farm.PlowedFields[choice - 1].Capacity)
+            if (choice != "" && int.TryParse(choice, out int input))
             {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                farm.PlowedFields[choice - 1].AddResource(seed);
-                Console.WriteLine($"Looks like you're the proud owner of a single {seed}!");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
+                int seedCount = farm.PlowedFields[input - 1].seedCount();
+                if (farm.PlowedFields[input - 1].seedCount() != farm.PlowedFields[input - 1].Capacity)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    farm.PlowedFields[input - 1].AddResource(seed);
+                    Console.WriteLine($"Looks like you're the proud owner of a single {seed}!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine($"Plowed Field {farm.PlowedFields[input - 1].shortId()} is daggum full! Y'heer??");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
             }
             else
             {
                 Console.Clear();
-                Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Plowed Field {farm.PlowedFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine();
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();

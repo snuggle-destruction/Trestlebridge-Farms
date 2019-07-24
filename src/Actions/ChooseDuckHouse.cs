@@ -30,15 +30,16 @@ namespace Trestlebridge.Actions
             Console.WriteLine($"Place the {animal.GetType().Name} where?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine());
-            int duckCount = farm.DuckHouses[choice - 1].duckCount();
+            string choice = Console.ReadLine();
 
-
-            if (farm.DuckHouses[choice - 1].duckCount() != farm.DuckHouses[choice - 1].Capacity)
+            if (choice != "" && int.TryParse(choice, out int input))
+            {
+            int duckCount = farm.DuckHouses[input - 1].duckCount();
+            if (farm.DuckHouses[input - 1].duckCount() != farm.DuckHouses[input - 1].Capacity)
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                farm.DuckHouses[choice - 1].AddResource(animal);
+                farm.DuckHouses[input - 1].AddResource(animal);
                 Console.WriteLine("Looks like you're the proud owner of a Duck!");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
@@ -48,7 +49,17 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Duck House {farm.DuckHouses[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine($"Duck House {farm.DuckHouses[input - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+            }
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();

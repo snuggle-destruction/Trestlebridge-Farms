@@ -89,9 +89,11 @@ namespace Trestlebridge.Actions
                         };
 
                         Console.Write("> ");
-                        string choice2 = Console.ReadLine();
+                        string input2 = Console.ReadLine();
 
-                        switch (Int32.Parse(choice2))
+                        if (input2 != "" && int.TryParse(input2, out int choice2))
+                        {
+                        switch (choice2)
                         {
                             case 1:
                                 if (farm.PlowedFields.Count != 0)
@@ -107,7 +109,16 @@ namespace Trestlebridge.Actions
                                 break;
                             default:
                                 break;
-
+                        }
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine();
+                            Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
+                            Console.WriteLine("\n\n");
+                            Console.WriteLine("Press enter to continue");
+                            Console.ReadLine();
                         }
                         break;
                     case 4:
