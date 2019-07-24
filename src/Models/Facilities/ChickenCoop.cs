@@ -39,6 +39,18 @@ namespace Trestlebridge.Models.Facilities
             return shortId;
         }
 
+        public string AnimalList()
+        {
+            // this function is for Adding a list of animals and how many of those animals there are in a field, when the user
+            // is given the choice to place an animal in a field
+            StringBuilder output = new StringBuilder();
+
+
+
+            return output.ToString();
+
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

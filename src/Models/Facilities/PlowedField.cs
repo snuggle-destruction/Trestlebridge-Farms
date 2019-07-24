@@ -28,6 +28,37 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
             return shortId;
         }
+        public string SeedList()
+        {
+            StringBuilder output = new StringBuilder();
+
+            var typeList =
+                (from seed in _seeds
+                 group seed by seed.GetType().Name into seedTypeList
+                 select new
+                 {
+                     seedType = seedTypeList.Key,
+                     seedCount = seedTypeList.Count()
+                 }).ToList();
+
+            typeList.ForEach(type =>
+            {
+                if (typeList.Count > 1)
+                {
+                    output.Append($"{type.seedCount} {type.seedType} ");
+                }
+                else
+                {
+                    output.Append($"{type.seedCount} {type.seedType}");
+                }
+            });
+
+            return output.ToString();
+
+        }
+
+
+
         public void AddResource(List<ISeedProducing> seeds)
         {
             // TODO: implement this...
@@ -54,11 +85,11 @@ namespace Trestlebridge.Models.Facilities
             {
                 if (type.seedType == "Sesame")
                 {
-                output.Append($"{type.seedType} seeds: {type.seedCount}\n");
+                    output.Append($"{type.seedType} seeds: {type.seedCount}\n");
                 }
                 else
                 {
-                output.Append($"{type.seedType}s: {type.seedCount}\n");
+                    output.Append($"{type.seedType}s: {type.seedCount}\n");
                 }
             });
             return output.ToString();
