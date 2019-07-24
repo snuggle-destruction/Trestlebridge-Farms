@@ -35,17 +35,19 @@ namespace Trestlebridge.Actions
             Console.WriteLine();
 
             // How can I output the type of animal chosen here?
-            Console.WriteLine($"Place the {animal} where?");
+            Console.WriteLine($"Place the {animal.GetType().Name} where?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine());
-            int animalCount = farm.GrazingFields[choice - 1].animalCount();
+            string choice = Console.ReadLine();
 
-            if (farm.GrazingFields[choice - 1].animalCount() != farm.GrazingFields[choice - 1].Capacity)
+            if (choice != "" && int.TryParse(choice, out int input))
+            {
+            int animalCount = farm.GrazingFields[input - 1].animalCount();
+            if (farm.GrazingFields[input - 1].animalCount() != farm.GrazingFields[input - 1].Capacity)
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                farm.GrazingFields[choice - 1].AddResource(animal);
+                farm.GrazingFields[input - 1].AddResource(animal);
                 Console.WriteLine($"Looks like you're the proud owner of a {animal}!");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
@@ -55,7 +57,17 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Grazing Field {farm.GrazingFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine($"Grazing Field {farm.GrazingFields[input - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine("\n\n");
+                Console.WriteLine("Press enter to continue");
+                Console.ReadLine();
+            }
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine();
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
@@ -64,7 +76,7 @@ namespace Trestlebridge.Actions
                 Couldn't get this to work. Can you?
                 Stretch goal. Only if the app is fully functional.
             */
-            // farm.PurchaseResource<IGrazing>(animal, choice);
+            // farm.PurchaseResource<IGrazing>(animal, input);
 
         }
     }

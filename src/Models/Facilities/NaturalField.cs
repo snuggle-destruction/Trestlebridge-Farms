@@ -2,6 +2,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using Trestlebridge.Interfaces;
+using System.Linq;
 
 
 namespace Trestlebridge.Models.Facilities
@@ -50,7 +51,22 @@ namespace Trestlebridge.Models.Facilities
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
             output.Append($"Natural field {shortId} has {this._composts.Count} compost\n");
-            this._composts.ForEach(a => output.Append($"   {a}\n"));
+            var typeList =
+                (from compost in _composts
+                 group compost by compost.GetType().Name into compostTypeList
+                 select new
+                 {
+                     compostType = compostTypeList.Key,
+                     compostCount = compostTypeList.Count()
+                 }
+                ).ToList();
+
+            //start here
+            typeList.ForEach(type =>
+            {
+                output.Append($"{type.compostType}s: {type.compostCount}\n");
+            });
+
             return output.ToString();
         }
         public int seedCount()

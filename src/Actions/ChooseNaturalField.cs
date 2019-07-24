@@ -26,27 +26,41 @@ namespace Trestlebridge.Actions
 
             Console.WriteLine();
 
-            Console.WriteLine($"Place the seed which natural field?");
+            Console.WriteLine($"Place the {compost.GetType().Name} which natural field?");
 
             Console.Write("> ");
-            int choice = Int32.Parse(Console.ReadLine());
-            int seedCount = farm.NaturalFields[choice - 1].seedCount();
+            string choice = Console.ReadLine();
 
-            if (farm.NaturalFields[choice - 1].seedCount() != farm.NaturalFields[choice - 1].Capacity)
+            if (choice != "" && int.TryParse(choice, out int input))
             {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                farm.NaturalFields[choice - 1].AddResource(compost);
-                Console.WriteLine($"Looks like you're the proud owner of a {compost}!");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
+            int seedCount = farm.NaturalFields[input - 1].seedCount();
+
+                
+                if (farm.NaturalFields[input - 1].seedCount() != farm.NaturalFields[input - 1].Capacity)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    farm.NaturalFields[input - 1].AddResource(compost);
+                    Console.WriteLine($"Looks like you're the proud owner of a {compost}!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine($"Natural Field {farm.NaturalFields[input - 1].shortId()} is daggum full! Y'heer??");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
             }
             else
             {
                 Console.Clear();
-                Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Natural Field {farm.NaturalFields[choice - 1].shortId()} is daggum full! Y'heer??");
+                Console.WriteLine();
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();

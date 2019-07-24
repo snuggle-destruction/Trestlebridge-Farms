@@ -21,9 +21,11 @@ namespace Trestlebridge.Actions
             Console.Write("> ");
             string input = Console.ReadLine();
 
-            if (input != "")
+            //TryParse checks to see if the first param in an int, if not it return false an proceeds to else. If true, out(put) a new var/int called choice
+            if (input != "" && int.TryParse(input, out int choice))
             {
-                switch (Int32.Parse(input))
+                //now we can use the new variable without having to convert it to an int.
+                switch (choice)
                 {
                     case 1:
                         farm.AddGrazingField(new GrazingField());
@@ -78,7 +80,7 @@ namespace Trestlebridge.Actions
             {
                 Console.Clear();
                 Console.WriteLine();
-                Console.WriteLine("You entered nothing. And that's wrong. You're bad.");
+                Console.WriteLine("You entered something that was not an option. And that's wrong. You're bad.");
                 Console.WriteLine("\n\n");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
