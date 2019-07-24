@@ -26,7 +26,7 @@ namespace Trestlebridge.Actions
 
             Console.WriteLine();
 
-            Console.WriteLine($"Place the seed which natural field?");
+            Console.WriteLine($"Place the {compost.GetType().Name} which natural field?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());

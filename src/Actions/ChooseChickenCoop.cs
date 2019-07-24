@@ -27,7 +27,7 @@ namespace Trestlebridge.Actions
             Console.WriteLine();
 
             // How can I output the type of chicken chosen here?
-            Console.WriteLine($"Place the {chicken} where?");
+            Console.WriteLine($"Place the {chicken.GetType().Name} where?");
 
             Console.Write("> ");
             int choice = Int32.Parse(Console.ReadLine());
