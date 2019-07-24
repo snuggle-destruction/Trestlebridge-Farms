@@ -33,9 +33,9 @@ namespace Trestlebridge.Actions
 
             if (choice != "" && int.TryParse(choice, out int input))
             {
-            int seedCount = farm.NaturalFields[input - 1].seedCount();
+                int seedCount = farm.NaturalFields[input - 1].seedCount();
 
-                
+
                 if (farm.NaturalFields[input - 1].seedCount() != farm.NaturalFields[input - 1].Capacity)
                 {
                     Console.Clear();

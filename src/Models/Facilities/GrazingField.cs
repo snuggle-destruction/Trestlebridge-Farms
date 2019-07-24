@@ -39,6 +39,37 @@ namespace Trestlebridge.Models.Facilities
             return shortId;
         }
 
+        public string AnimalList()
+        {
+            // this function is for Adding a list of animals and how many of those animals there are in a field, when the user
+            // is given the choice to place an animal in a field
+            StringBuilder output = new StringBuilder();
+
+            var typeList =
+                (from animal in _animals
+                 group animal by animal.GetType().Name into animalTypeList
+                 select new
+                 {
+                     animalType = animalTypeList.Key,
+                     animalCount = animalTypeList.Count()
+                 }).ToList();
+
+            typeList.ForEach(type =>
+            {
+                if (typeList.Count > 1)
+                {
+                    output.Append($"{type.animalCount} {type.animalType} ");
+                }
+                else
+                {
+                    output.Append($"{type.animalCount} {type.animalType}");
+                }
+            });
+
+            return output.ToString();
+
+        }
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

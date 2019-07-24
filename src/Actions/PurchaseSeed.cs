@@ -93,23 +93,23 @@ namespace Trestlebridge.Actions
 
                         if (input2 != "" && int.TryParse(input2, out int choice2))
                         {
-                        switch (choice2)
-                        {
-                            case 1:
-                                if (farm.PlowedFields.Count != 0)
-                                {
-                                    ChoosePlowedField.CollectInput(farm, new Sunflower());
-                                }
-                                break;
-                            case 2:
-                                if (farm.NaturalFields.Count != 0)
-                                {
-                                    ChooseNaturalfield.CollectInput(farm, new Sunflower());
-                                }
-                                break;
-                            default:
-                                break;
-                        }
+                            switch (choice2)
+                            {
+                                case 1:
+                                    if (farm.PlowedFields.Count != 0)
+                                    {
+                                        ChoosePlowedField.CollectInput(farm, new Sunflower());
+                                    }
+                                    break;
+                                case 2:
+                                    if (farm.NaturalFields.Count != 0)
+                                    {
+                                        ChooseNaturalfield.CollectInput(farm, new Sunflower());
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                         else
                         {
