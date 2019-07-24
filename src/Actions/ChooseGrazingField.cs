@@ -42,26 +42,26 @@ namespace Trestlebridge.Actions
 
             if (choice != "" && int.TryParse(choice, out int input))
             {
-            int animalCount = farm.GrazingFields[input - 1].animalCount();
-            if (farm.GrazingFields[input - 1].animalCount() != farm.GrazingFields[input - 1].Capacity)
-            {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                farm.GrazingFields[input - 1].AddResource(animal);
-                Console.WriteLine($"Looks like you're the proud owner of a {animal}!");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
-            }
-            else
-            {
-                Console.Clear();
-                Console.WriteLine("\n\n\n");
-                Console.WriteLine($"Grazing Field {farm.GrazingFields[input - 1].shortId()} is daggum full! Y'heer??");
-                Console.WriteLine("\n\n");
-                Console.WriteLine("Press enter to continue");
-                Console.ReadLine();
-            }
+                int animalCount = farm.GrazingFields[input - 1].animalCount();
+                if (farm.GrazingFields[input - 1].animalCount() != farm.GrazingFields[input - 1].Capacity)
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    farm.GrazingFields[input - 1].AddResource(animal);
+                    Console.WriteLine($"Looks like you're the proud owner of a {animal}!");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("\n\n\n");
+                    Console.WriteLine($"Grazing Field {farm.GrazingFields[input - 1].shortId()} is daggum full! Y'heer??");
+                    Console.WriteLine("\n\n");
+                    Console.WriteLine("Press enter to continue");
+                    Console.ReadLine();
+                }
             }
             else
             {
